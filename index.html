@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Bavisyaa Sampath Kumar — Integrated MSc Software Systems student at PSG College of Technology. Building projects in C++, Python, and JavaScript. Open to internship opportunities." />
   <title>Bavisyaa Sampath Kumar — Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2300e5a0'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='18' fill='%23000'>b</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -15,7 +16,7 @@
   <!-- NAV -->
   <nav id="navbar">
     <div class="nav-logo">bsk<span class="accent">.</span></div>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links-list">
       <li><a href="#about">about</a></li>
       <li><a href="#projects">projects</a></li>
       <li><a href="#skills">skills</a></li>
@@ -23,14 +24,14 @@
       <li><a href="#contact">contact</a></li>
     </ul>
     <a class="nav-resume-btn" href="resume.pdf" download>↓ Resume</a>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
   <!-- HERO -->
   <section id="about" class="hero">
-    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-grid" aria-hidden="true"></div>
     <div class="hero-content">
       <p class="hero-greeting">// hello, world</p>
       <h1 class="hero-name">Bavisyaa<br><span class="accent">Sampath Kumar</span></h1>
@@ -41,22 +42,34 @@
         Currently exploring DBMS internals, algorithm design, and building things that actually run.
       </p>
       <div class="hero-stats">
-        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Projects Built</span></div>
-        <div class="stat"><span class="stat-num">31</span><span class="stat-label">LeetCode Solved</span></div>
-        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Virtual Internships</span></div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">31</span>
+          <span class="stat-label">LeetCode Solved</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Virtual Internships</span>
+        </div>
       </div>
       <div class="hero-cta">
         <a class="btn-primary" href="#projects">View Projects</a>
         <a class="btn-secondary" href="https://github.com/bavisyaa03" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn-secondary" href="resume.pdf" download>↓ Download Resume</a>
+        <a class="btn-secondary" href="resume.pdf" download>↓ Resume</a>
       </div>
     </div>
-    <div class="hero-terminal">
+
+    <div class="hero-terminal" aria-hidden="true">
       <div class="terminal-bar">
-        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
         <span class="terminal-title">bavisyaa@psgtech:~</span>
       </div>
-      <div class="terminal-body" id="terminal-body">
+      <div class="terminal-body">
         <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
         <p class="output">bavisyaa_sampath_kumar</p>
         <p><span class="prompt">$</span> <span class="cmd">cat about.txt</span></p>
@@ -64,8 +77,8 @@
         <p class="output">PSG College of Technology, 2024–2029</p>
         <p class="output">CGPA: 7.2 | Sem 1 complete</p>
         <p><span class="prompt">$</span> <span class="cmd">ls projects/</span></p>
-        <p class="output">bank-queue/  traffic-sim/  dsa-visualizer/</p>
-        <p class="output">file-sync/   job-analysis/</p>
+        <p class="output">bank-queue/&nbsp;&nbsp;traffic-sim/&nbsp;&nbsp;dsa-visualizer/</p>
+        <p class="output">file-sync/&nbsp;&nbsp;&nbsp;job-analysis/</p>
         <p><span class="prompt">$</span> <span class="cmd typing-cursor">_</span></p>
       </div>
     </div>
@@ -79,6 +92,7 @@
 
       <div class="projects-grid">
 
+        <!-- Featured -->
         <div class="project-card featured">
           <div class="project-meta">
             <span class="project-lang web">Web</span>
@@ -87,7 +101,7 @@
           </div>
           <h3>DSA Visualizer</h3>
           <p>Interactive web app that animates sorting algorithms (Bubble, Merge, Quick) and graph traversals (BFS, DFS) with step-by-step mode and time-complexity display.</p>
-          <div class="project-preview">
+          <div class="project-preview" aria-hidden="true">
             <div class="preview-placeholder">
               <span class="preview-icon">⣿</span>
               <span>Live Demo Available</span>
@@ -102,13 +116,14 @@
           </div>
         </div>
 
+        <!-- Bank Queue -->
         <div class="project-card">
           <div class="project-meta">
             <span class="project-lang cpp">C++</span>
             <span class="project-year">2025</span>
           </div>
           <h3>Bank Queue Management System</h3>
-          <p>Simulates bank operations using a circular regular queue, max-heap priority queue for VIP customers, and a hash table with chaining for O(1) account lookups. ~1000 lines of C++.</p>
+          <p>Simulates bank operations using a circular queue, max-heap priority queue for VIP customers, and a hash table with chaining for O(1) account lookups.</p>
           <div class="tags">
             <span>C++</span><span>OOP</span><span>Data Structures</span><span>Hash Table</span>
           </div>
@@ -117,13 +132,14 @@
           </div>
         </div>
 
+        <!-- Traffic Light -->
         <div class="project-card">
           <div class="project-meta">
             <span class="project-lang cpp">C++</span>
             <span class="project-year">2025</span>
           </div>
           <h3>Traffic Light Simulation</h3>
-          <p>OOP-based multi-junction traffic controller using inheritance, polymorphism, composition, and abstraction. Includes Indian RTO-format license plate generation for vehicle tracking.</p>
+          <p>OOP-based multi-junction traffic controller using inheritance, polymorphism, and abstraction. Includes Indian RTO-format license plate generation for vehicle tracking.</p>
           <div class="tags">
             <span>C++</span><span>OOP</span><span>UML</span><span>Simulation</span>
           </div>
@@ -132,6 +148,7 @@
           </div>
         </div>
 
+        <!-- File Sync -->
         <div class="project-card">
           <div class="project-meta">
             <span class="project-lang py">Python</span>
@@ -147,6 +164,7 @@
           </div>
         </div>
 
+        <!-- Job Analysis -->
         <div class="project-card">
           <div class="project-meta">
             <span class="project-lang py">Python</span>
@@ -172,6 +190,7 @@
       <p class="section-label">// skills</p>
       <h2 class="section-title">What I Work With</h2>
       <div class="skills-grid">
+
         <div class="skill-group">
           <h4>Languages</h4>
           <div class="skill-tags">
@@ -183,6 +202,7 @@
             <span class="skill-tag fam">Java (familiar)</span>
           </div>
         </div>
+
         <div class="skill-group">
           <h4>CS Concepts</h4>
           <div class="skill-tags">
@@ -191,11 +211,12 @@
             <span class="skill-tag top">OOP</span>
             <span class="skill-tag">DBMS</span>
             <span class="skill-tag">OS</span>
-            <span class="skill-tag">Computer Organization</span>
+            <span class="skill-tag">Computer Organisation</span>
           </div>
         </div>
+
         <div class="skill-group">
-          <h4>Tools</h4>
+          <h4>Tools &amp; Platforms</h4>
           <div class="skill-tags">
             <span class="skill-tag top">Git</span>
             <span class="skill-tag top">GitHub</span>
@@ -204,6 +225,7 @@
             <span class="skill-tag">Code::Blocks</span>
           </div>
         </div>
+
         <div class="skill-group">
           <h4>Web</h4>
           <div class="skill-tags">
@@ -212,11 +234,12 @@
             <span class="skill-tag">JavaScript</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- CERTIFICATIONS & EXPERIENCE -->
   <section id="certifications" class="section">
     <div class="container">
       <p class="section-label">// certifications</p>
@@ -228,7 +251,7 @@
           <div class="cert-info">
             <h4>Goldman Sachs Virtual Experience</h4>
             <p class="cert-issuer">Goldman Sachs &mdash; Forage</p>
-            <p class="cert-desc">Completed internal audit simulation covering risk assessment methodology, control evaluation, and practical risk assessment exercises.</p>
+            <p class="cert-desc">Completed internal audit simulation covering risk assessment methodology and control evaluation exercises.</p>
             <div class="tags">
               <span>Risk Assessment</span><span>Internal Audit</span><span>Finance</span>
             </div>
@@ -251,7 +274,7 @@
           <div class="cert-logo lc">LC</div>
           <div class="cert-info">
             <h4>LeetCode Problem Solving</h4>
-            <p class="cert-issuer">LeetCode — leetcode.com/u/bavisyaa</p>
+            <p class="cert-issuer"><a href="https://leetcode.com/u/bavisyaa" target="_blank" rel="noopener">leetcode.com/u/bavisyaa</a></p>
             <p class="cert-desc">31 problems solved across difficulty levels: Easy (16), Medium (9), Hard (6). Focused on arrays, strings, and graph problems.</p>
             <div class="tags">
               <span>DSA</span><span>Problem Solving</span><span>31 Solved</span>
@@ -271,19 +294,19 @@
       <p class="contact-sub">I'm a first-year student actively looking for internship opportunities. Feel free to reach out!</p>
       <div class="contact-links">
         <a href="mailto:bavisyaa.s@gmail.com" class="contact-link">
-          <span class="contact-icon">✉</span>
+          <span class="contact-icon" aria-hidden="true">✉</span>
           <span>bavisyaa.s@gmail.com</span>
         </a>
         <a href="https://www.linkedin.com/in/bavisyaa-sampath-kumar-18204739b" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-icon">in</span>
+          <span class="contact-icon" aria-hidden="true">in</span>
           <span>linkedin.com/in/bavisyaa-sampath-kumar</span>
         </a>
         <a href="https://github.com/bavisyaa03" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-icon">⌥</span>
+          <span class="contact-icon" aria-hidden="true">gh</span>
           <span>github.com/bavisyaa03</span>
         </a>
         <a href="https://leetcode.com/u/bavisyaa/" target="_blank" rel="noopener" class="contact-link">
-          <span class="contact-icon">#</span>
+          <span class="contact-icon" aria-hidden="true">#</span>
           <span>leetcode.com/u/bavisyaa</span>
         </a>
       </div>
