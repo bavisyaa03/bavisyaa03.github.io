@@ -1,186 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bavisyaa Sampath Kumar — Integrated MSc Software Systems student at PSG College of Technology. Building projects in C++, Python, and JavaScript. Open to internship opportunities." />
   <title>Bavisyaa Sampath Kumar — Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="grid-bg" aria-hidden="true"></div>
-
   <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-links">
-      <a href="#about">about</a>
-      <a href="#projects">projects</a>
-      <a href="#skills">skills</a>
-      <a href="#contact">contact</a>
-    </div>
+  <nav id="navbar">
+    <div class="nav-logo">bsk<span class="accent">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#certifications">certs</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <a class="nav-resume-btn" href="resume.pdf" download>↓ Resume</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="about">
-    <h1 class="hero-name">Bavisyaa<br><span class="outline-text">Sampath Kumar</span></h1>
-    <p class="hero-desc">
-      Integrated MSc Software Systems student at PSG College of Technology, Coimbatore.<br>
-      I build things with code — algorithms, systems, and interfaces.
-    </p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn-primary">View Projects</a>
-      <a href="https://github.com/bavisyaa03" target="_blank" class="btn-outline">GitHub ↗</a>
+  <section id="about" class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">// hello, world</p>
+      <h1 class="hero-name">Bavisyaa<br><span class="accent">Sampath Kumar</span></h1>
+      <p class="hero-tagline">Integrated M.Sc. Software Systems &middot; PSG College of Technology, Coimbatore &middot; Graduating 2029</p>
+      <p class="hero-bio">
+        First-year student who writes C++ for fun and actually enjoys debugging.<br>
+        Interested in <strong>systems programming</strong>, <strong>data structures</strong>, and <strong>backend development</strong>.<br>
+        Currently exploring DBMS internals, algorithm design, and building things that actually run.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">Projects Built</span></div>
+        <div class="stat"><span class="stat-num">31</span><span class="stat-label">LeetCode Solved</span></div>
+        <div class="stat"><span class="stat-num">2</span><span class="stat-label">Virtual Internships</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#projects">View Projects</a>
+        <a class="btn-secondary" href="https://github.com/bavisyaa03" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn-secondary" href="resume.pdf" download>↓ Download Resume</a>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Projects Live</span></div>
-      <div class="stat"><span class="stat-num">PSG</span><span class="stat-label">Tech, Coimbatore</span></div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+        <span class="terminal-title">bavisyaa@psgtech:~</span>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+        <p class="output">bavisyaa_sampath_kumar</p>
+        <p><span class="prompt">$</span> <span class="cmd">cat about.txt</span></p>
+        <p class="output">Integrated M.Sc. Software Systems</p>
+        <p class="output">PSG College of Technology, 2024–2029</p>
+        <p class="output">CGPA: 7.2 | Sem 1 complete</p>
+        <p><span class="prompt">$</span> <span class="cmd">ls projects/</span></p>
+        <p class="output">bank-queue/  traffic-sim/  dsa-visualizer/</p>
+        <p class="output">file-sync/   job-analysis/</p>
+        <p><span class="prompt">$</span> <span class="cmd typing-cursor">_</span></p>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section-label">// projects</div>
-    <h2 class="section-title">Things I've Built</h2>
-    <div class="projects-grid">
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="section-label">// projects</p>
+      <h2 class="section-title">Things I've Built</h2>
 
-      <div class="project-card featured">
-        <div class="card-top">
-          <span class="card-badge">Live</span>
-          <span class="card-year">2026</span>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-meta">
+            <span class="project-lang web">Web</span>
+            <span class="project-year">2025</span>
+            <span class="project-badge live">● Live</span>
+          </div>
+          <h3>DSA Visualizer</h3>
+          <p>Interactive web app that animates sorting algorithms (Bubble, Merge, Quick) and graph traversals (BFS, DFS) with step-by-step mode and time-complexity display.</p>
+          <div class="project-preview">
+            <div class="preview-placeholder">
+              <span class="preview-icon">⣿</span>
+              <span>Live Demo Available</span>
+            </div>
+          </div>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>DSA</span>
+          </div>
+          <div class="project-links">
+            <a href="https://bavisyaa03.github.io/dsa-visualiser" target="_blank" rel="noopener" class="link-primary">Live Demo ↗</a>
+            <a href="https://github.com/bavisyaa03/dsa-visualiser" target="_blank" rel="noopener" class="link-secondary">GitHub ↗</a>
+          </div>
         </div>
-        <h3>DSA Visualizer</h3>
-        <p>Interactive web app that animates sorting algorithms (Bubble, Merge, Quick) and graph traversals (BFS, DFS) with step-by-step mode and complexity display.</p>
-        <div class="card-tags">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>DSA</span>
+
+        <div class="project-card">
+          <div class="project-meta">
+            <span class="project-lang cpp">C++</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>Bank Queue Management System</h3>
+          <p>Simulates bank operations using a circular regular queue, max-heap priority queue for VIP customers, and a hash table with chaining for O(1) account lookups. ~1000 lines of C++.</p>
+          <div class="tags">
+            <span>C++</span><span>OOP</span><span>Data Structures</span><span>Hash Table</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bavisyaa03/bank-queue-system" target="_blank" rel="noopener" class="link-primary">GitHub ↗</a>
+          </div>
         </div>
-        <div class="card-links">
-          <a href="https://bavisyaa03.github.io/dsa-visualiser" target="_blank" class="btn-primary small">Live Demo ↗</a>
-          <a href="https://github.com/bavisyaa03/dsa-visualiser" target="_blank" class="btn-outline small">GitHub ↗</a>
+
+        <div class="project-card">
+          <div class="project-meta">
+            <span class="project-lang cpp">C++</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>Traffic Light Simulation</h3>
+          <p>OOP-based multi-junction traffic controller using inheritance, polymorphism, composition, and abstraction. Includes Indian RTO-format license plate generation for vehicle tracking.</p>
+          <div class="tags">
+            <span>C++</span><span>OOP</span><span>UML</span><span>Simulation</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bavisyaa03/traffic-light-simulation" target="_blank" rel="noopener" class="link-primary">GitHub ↗</a>
+          </div>
         </div>
+
+        <div class="project-card">
+          <div class="project-meta">
+            <span class="project-lang py">Python</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>File Synchronization Tool</h3>
+          <p>Syncs files between two folders with conflict resolution logic and Windows system folder filtering. Supports folder and file sync modes with safe operation checks.</p>
+          <div class="tags">
+            <span>Python</span><span>File I/O</span><span>OS Module</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bavisyaa03" target="_blank" rel="noopener" class="link-primary">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-meta">
+            <span class="project-lang py">Python</span>
+            <span class="project-year">2025</span>
+          </div>
+          <h3>Job Employment Analysis</h3>
+          <p>Processes employment datasets to extract hiring trends, statistics, and patterns. Built with data analysis techniques and structured reporting output.</p>
+          <div class="tags">
+            <span>Python</span><span>Data Analysis</span><span>CSV</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/bavisyaa03" target="_blank" rel="noopener" class="link-primary">GitHub ↗</a>
+          </div>
+        </div>
+
       </div>
-
-      <div class="project-card">
-        <div class="card-top">
-          <span class="card-badge wip">C++</span>
-          <span class="card-year">2025</span>
-        </div>
-        <h3>Bank Queue System</h3>
-        <p>Simulates a bank queue using a regular queue, max-heap priority queue, and hash table with chaining to manage customer service efficiently.</p>
-        <div class="card-tags">
-          <span>C++</span><span>OOP</span><span>Data Structures</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/bavisyaa03" target="_blank" class="btn-outline small">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="card-top">
-          <span class="card-badge wip">C++</span>
-          <span class="card-year">2025</span>
-        </div>
-        <h3>Traffic Light Simulation</h3>
-        <p>OOP-based simulation of a traffic light system demonstrating inheritance, polymorphism, and file I/O with Indian RTO plate generation.</p>
-        <div class="card-tags">
-          <span>C++</span><span>OOP</span><span>UML</span>
-        </div>
-        <div class="card-links">
-          <a href="https://github.com/bavisyaa03" target="_blank" class="btn-outline small">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="card-top">
-          <span class="card-badge">Live</span>
-          <span class="card-year">2026</span>
-        </div>
-        <h3>Expense Tracker</h3>
-        <p>Web app to track daily expenses with category filtering, monthly totals, and localStorage persistence. Built with vanilla HTML, CSS, and JavaScript — no frameworks.</p>
-        <div class="card-tags">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>localStorage</span>
-        </div>
-        <div class="card-links">
-          <a href="https://bavisyaa03.github.io/expense-tracker" target="_blank" class="btn-primary small">Live Demo ↗</a>
-          <a href="https://github.com/bavisyaa03/expense-tracker" target="_blank" class="btn-outline small">GitHub ↗</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="section-label">// skills</div>
-    <h2 class="section-title">What I Work With</h2>
-    <div class="skills-grid">
-
-      <div class="skill-group">
-        <div class="skill-group-title">Languages</div>
-        <div class="skill-items">
-          <div class="skill-pill">C++</div>
-          <div class="skill-pill">C</div>
-          <div class="skill-pill">Python</div>
-          <div class="skill-pill">JavaScript</div>
-          <div class="skill-pill">SQL</div>
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="section-label">// skills</p>
+      <h2 class="section-title">What I Work With</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span class="skill-tag top">C++</span>
+            <span class="skill-tag top">Python</span>
+            <span class="skill-tag top">C</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag fam">Java (familiar)</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>CS Concepts</h4>
+          <div class="skill-tags">
+            <span class="skill-tag top">Data Structures</span>
+            <span class="skill-tag top">Algorithms</span>
+            <span class="skill-tag top">OOP</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">OS</span>
+            <span class="skill-tag">Computer Organization</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Tools</h4>
+          <div class="skill-tags">
+            <span class="skill-tag top">Git</span>
+            <span class="skill-tag top">GitHub</span>
+            <span class="skill-tag top">VS Code</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Code::Blocks</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Web</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="skill-group">
-        <div class="skill-group-title">Concepts</div>
-        <div class="skill-items">
-          <div class="skill-pill">Data Structures</div>
-          <div class="skill-pill">Algorithms</div>
-          <div class="skill-pill">OOP</div>
-          <div class="skill-pill">DBMS</div>
-          <div class="skill-pill">OS</div>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <p class="section-label">// certifications</p>
+      <h2 class="section-title">Experience &amp; Certifications</h2>
+      <div class="certs-grid">
+
+        <div class="cert-card">
+          <div class="cert-logo gs">GS</div>
+          <div class="cert-info">
+            <h4>Goldman Sachs Virtual Experience</h4>
+            <p class="cert-issuer">Goldman Sachs &mdash; Forage</p>
+            <p class="cert-desc">Completed internal audit simulation covering risk assessment methodology, control evaluation, and practical risk assessment exercises.</p>
+            <div class="tags">
+              <span>Risk Assessment</span><span>Internal Audit</span><span>Finance</span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-group-title">Tools</div>
-        <div class="skill-items">
-          <div class="skill-pill">Git</div>
-          <div class="skill-pill">GitHub</div>
-          <div class="skill-pill">VS Code</div>
-          <div class="skill-pill">Code::Blocks</div>
-          <div class="skill-pill">Linux</div>
+        <div class="cert-card">
+          <div class="cert-logo jp">JPM</div>
+          <div class="cert-info">
+            <h4>JPMorgan Chase Virtual Experience</h4>
+            <p class="cert-issuer">JPMorgan Chase &mdash; Forage</p>
+            <p class="cert-desc">Completed software engineering simulation involving real-world financial systems and data visualisation tasks.</p>
+            <div class="tags">
+              <span>Software Engineering</span><span>Data Viz</span><span>Finance</span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="skill-group">
-        <div class="skill-group-title">Web</div>
-        <div class="skill-items">
-          <div class="skill-pill">HTML</div>
-          <div class="skill-pill">CSS</div>
-          <div class="skill-pill">JavaScript</div>
+        <div class="cert-card">
+          <div class="cert-logo lc">LC</div>
+          <div class="cert-info">
+            <h4>LeetCode Problem Solving</h4>
+            <p class="cert-issuer">LeetCode — leetcode.com/u/bavisyaa</p>
+            <p class="cert-desc">31 problems solved across difficulty levels: Easy (16), Medium (9), Hard (6). Focused on arrays, strings, and graph problems.</p>
+            <div class="tags">
+              <span>DSA</span><span>Problem Solving</span><span>31 Solved</span>
+            </div>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="section-label">// contact</div>
-    <h2 class="section-title">Get In Touch</h2>
-    <p class="contact-desc">
-      I'm a first-year student actively looking for internship opportunities.<br>
-      Feel free to reach out!
-    </p>
-    <div class="contact-links">
-      <a href="mailto:bavisyaa.s@gmail.com" class="contact-card">
-        <span class="contact-icon">✉</span>
-        <span>bavisyaa.s@gmail.com</span>
-      </a>
-      <a href="https://github.com/bavisyaa03" target="_blank" class="contact-card">
-        <span class="contact-icon">⌥</span>
-        <span>github.com/bavisyaa03</span>
-      </a>
+  <section id="contact" class="section section-alt">
+    <div class="container contact-container">
+      <p class="section-label">// contact</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-sub">I'm a first-year student actively looking for internship opportunities. Feel free to reach out!</p>
+      <div class="contact-links">
+        <a href="mailto:bavisyaa.s@gmail.com" class="contact-link">
+          <span class="contact-icon">✉</span>
+          <span>bavisyaa.s@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/bavisyaa-sampath-kumar-18204739b" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-icon">in</span>
+          <span>linkedin.com/in/bavisyaa-sampath-kumar</span>
+        </a>
+        <a href="https://github.com/bavisyaa03" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-icon">⌥</span>
+          <span>github.com/bavisyaa03</span>
+        </a>
+        <a href="https://leetcode.com/u/bavisyaa/" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-icon">#</span>
+          <span>leetcode.com/u/bavisyaa</span>
+        </a>
+      </div>
+      <a class="btn-primary resume-big-btn" href="resume.pdf" download>↓ Download Resume</a>
     </div>
   </section>
 
-  <footer class="footer">
-    <span>Built by Bavisyaa Sampath Kumar — 2025</span>
+  <footer>
+    <p>Built by Bavisyaa Sampath Kumar &mdash; 2025</p>
   </footer>
 
   <script src="script.js"></script>
